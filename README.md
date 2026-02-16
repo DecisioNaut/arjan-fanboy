@@ -42,17 +42,21 @@ This skill was created using the **[skill-creator](https://github.com/anthropics
 For best practices, we recommend placing skills in a dedicated directory in your repository:
 
 ```
-your-project/
+your-project/                    # Your project root
 ├── .agents/
 │   └── skills/
-│       └── arjan-fanboy/
+│       └── arjan-fanboy/        # The skill installed here
 │           ├── SKILL.md
 │           ├── LICENSE.txt
 │           └── references/
-│               └── arjan_coding_principles.md
-├── src/
-├── tests/
-└── README.md
+│               ├── principles.md
+│               ├── patterns.md
+│               ├── refactoring.md
+│               ├── style.md
+│               └── examples.md
+├── src/                         # (Your application code)
+├── tests/                       # (Your tests)
+└── README.md                    # (Your project README)
 ```
 
 **Why `.agents/skills/`?**
