@@ -68,7 +68,9 @@ your-project/
 ### Option 1: Use the Packaged Skill
 
 ```bash
-# Download the arjan-fanboy.skill file
+# Download the arjan-fanboy.skill file from the repository
+wget https://github.com/DecisioNaut/arjan-fanboy/releases/download/v1.0.0/arjan-fanboy.skill
+
 # Extract it to your skills directory
 mkdir -p .agents/skills
 unzip arjan-fanboy.skill -d .agents/skills/
@@ -81,7 +83,7 @@ unzip arjan-fanboy.skill -d .agents/skills/
 
 ```bash
 # Clone this repository
-git clone https://github.com/your-username/arjan-fanboy.git
+git clone https://github.com/DecisioNaut/arjan-fanboy.git
 
 # Copy the skill folder to your project
 cp -r arjan-fanboy/arjan-fanboy /path/to/your-project/.agents/skills/
@@ -95,7 +97,7 @@ ln -s $(pwd)/arjan-fanboy/arjan-fanboy /path/to/your-project/.agents/skills/arja
 ```bash
 # Add as a submodule in your project
 cd your-project
-git submodule add https://github.com/your-username/arjan-fanboy.git .agents/skills/arjan-fanboy-repo
+git submodule add https://github.com/DecisioNaut/arjan-fanboy.git .agents/skills/arjan-fanboy-repo
 ln -s .agents/skills/arjan-fanboy-repo/arjan-fanboy .agents/skills/arjan-fanboy
 
 # Team members can then:
@@ -122,18 +124,26 @@ Once installed, the skill activates automatically when you:
 "What would Arjan say about my code?"
 ```
 
-## Structure
+## Repository Structure
 
 ```
-arjan-fanboy/
-├── SKILL.md                     # Main skill file (130 lines)
-├── LICENSE.txt                  # MIT License
-└── references/                  # Domain-specific references
-    ├── principles.md            # SOLID, coupling/cohesion (115 lines)
-    ├── patterns.md              # Design patterns (90 lines)
-    ├── refactoring.md           # Common refactoring patterns (174 lines)
-    ├── style.md                 # Code style & anti-patterns (365 lines)
-    └── examples.md              # Complete refactoring examples (214 lines)
+arjan-fanboy/                    # Repository root
+├── .agents/
+│   └── skills/
+│       └── skill-creator/       # Skill-creator used to build this skill
+├── .gitignore
+├── CHANGELOG.md                 # Version history
+├── README.md                    # This file
+├── arjan-fanboy.skill          # Packaged skill (13KB zip)
+└── arjan-fanboy/                # The skill folder
+    ├── SKILL.md                 # Main skill file (127 lines)
+    ├── LICENSE.txt              # MIT License
+    └── references/              # Domain-specific references
+        ├── principles.md        # SOLID, coupling/cohesion (115 lines)
+        ├── patterns.md          # Design patterns (90 lines)
+        ├── refactoring.md       # Common refactoring patterns (174 lines)
+        ├── style.md             # Code style & anti-patterns (365 lines)
+        └── examples.md          # Complete refactoring examples (214 lines)
 ```
 
 ### What's Inside
@@ -157,7 +167,7 @@ arjan-fanboy/
 
 MIT License - See [LICENSE.txt](arjan-fanboy/LICENSE.txt)
 
-Based on code examples from Arjan Egges' repositories, which are also MIT licensed.
+Based on code examples from [Arjan Egges' repositories](https://github.com/ArjanCodes), which are also MIT licensed.
 
 ## Contributing
 
