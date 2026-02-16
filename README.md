@@ -128,9 +128,6 @@ Once installed, the skill activates automatically when you:
 
 ```
 arjan-fanboy/                    # Repository root
-├── .agents/
-│   └── skills/
-│       └── skill-creator/       # Skill-creator used to build this skill
 ├── .gitignore
 ├── CHANGELOG.md                 # Version history
 ├── README.md                    # This file
