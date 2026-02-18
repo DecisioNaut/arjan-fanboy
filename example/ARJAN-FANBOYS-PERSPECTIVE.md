@@ -78,6 +78,4 @@ def main() -> None:
 - **Make state transitions explicit**: Consider returning the new state from `press()` for easier testing, or use a small state enum if behavior grows.
 
 ## Verdict
-From Arjan's perspective, the refactored version is clearly superior: it is more testable, more explicit, and closer to idiomatic modern Python while keeping the design simple.
-
-P.S. The agent asked 
+From Arjan's perspective (better: arjan-fanboy's perspective), the refactored version is clearly superior: it is more testable, more explicit, and closer to idiomatic modern Python while keeping the design simple. And it's more in line with Arjan's current style with is only fair, as the original refactor was done 5 years ago.
